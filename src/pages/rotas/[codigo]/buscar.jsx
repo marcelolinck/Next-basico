@@ -1,14 +1,18 @@
 //O useRouter, serve para auxiliar na construcao de rotas dinamicas no next
 import { useRouter } from "next/router";
+import Link from "next/link";
 
-export default function buscar(){
-    const router  = useRouter()
-    //Nesse caso colocanos o nome da pasta código dentro de colchetes para indicar que a pasta é dinamica permitindo capturar o codigo passado via URL
-    const codigo = router.query.codigo
+export default function buscar() {
+  const router = useRouter();
+  //Nesse caso colocanos o nome da pasta código dentro de colchetes para indicar que a pasta é dinamica permitindo capturar o codigo passado via URL
+  const codigo = router.query.codigo;
 
-    return(
-        <div>
-            <h1>Rotas/{codigo}/Buscar!!!</h1>
-        </div>
-    )
+  return (
+    <div>
+      <h1>Rotas/{codigo}/Buscar!!!</h1>
+      <Link href="/rotas">
+        <button>Voltar</button>
+      </Link>
+    </div>
+  );
 }
