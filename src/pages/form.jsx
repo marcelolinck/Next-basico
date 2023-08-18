@@ -20,6 +20,7 @@ export default function form() {
         body: JSON.stringify({nome, idade})
     })
 
+    //Aqui limpa os dados dos campos.
     setNome("")
     setIdade(0)
 
