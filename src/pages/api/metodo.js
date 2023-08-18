@@ -3,7 +3,7 @@ export default(req, res) =>{
         res.status(200).json({nome: "Pedro",
         metodo: req.method})
     } else {
-        res.status(200).json({nome: "João",
+        res.status(200).json({nome: "Maria",
         metodo: req.method})
     }
 }
